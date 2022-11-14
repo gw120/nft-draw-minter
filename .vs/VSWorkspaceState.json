@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\hardhat",
+    "\\hardhat\\scripts",
+    "\\hardhat\\test",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\features",
+    "\\src\\pages",
+    "\\src\\utils"
   ],
-  "SelectedNode": "\\C:\\Users\\asus\\Source\\Repos\\nft-draw-minter",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
