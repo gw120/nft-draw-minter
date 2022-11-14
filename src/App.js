@@ -1,9 +1,7 @@
 import "./App.css"
-import { Home, Dashboard, CreateNft } from './pages'
+import { Home, Dashboard, CreateNft, NftPage } from './pages'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
-
-
 
 function App() {
 
@@ -15,6 +13,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/mint-nft" element={<CreateNft />} />
+                    <Route path="/nft-items/:id" element={<NftPage />} />
+
                 </Routes>
             </Router>
         </div>
