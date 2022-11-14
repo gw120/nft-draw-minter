@@ -70,11 +70,13 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 ### contracts
 The application is built with ERC721.sol nft standard contract from openzepplin and more specificaly the ERC721URIStorage extension, it allows user to mint an nft and set it's correspanding IPFS metadata URI
 ### User interface
-The front end is structured into 3 pages:
+The front end is structured into 4 pages:
 * The home page is the landing page of the app, it contains a list of all the previously minted nfts.
 ![Capture d’écran 2022-05-20 à 20 04 43](https://user-images.githubusercontent.com/83681204/169628955-e8ded120-fd78-4dad-bcd0-6a3f83c41ad2.png)
 * The Mint page is where the user can create a new nft, it uses React Canvas to allow the user to draw whatever he wants and Reacte color for choosing the picture backgound color.After finishing the drawing part and providing the required nft metadata (name, description), the user can mint his nft while paying a small minting fee
 ![Capture d’écran 2022-05-20 à 19 53 36](https://user-images.githubusercontent.com/83681204/169628978-747402c1-9e51-4a73-953b-e5025a9428d2.png)
+* The Nft page gives details about each item: creator, name, description, (and optionaly the price).
+![Capture d’écran 2022-05-20 à 19 53 36](https://user-images.githubusercontent.com/83681204/169651032-1b7480ec-e2be-4efd-afaa-519951fb17e1.png)
 * Each user has it's own Dashboard, it contains all the nft that he has created.
 ![Capture d’écran 2022-05-20 à 19 52 05](https://user-images.githubusercontent.com/83681204/169628982-46147205-ebd1-4aac-9163-9b26ed79dda4.png)
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -86,13 +88,13 @@ After going through all the installation and setup steps, you'll need to deploy 
    npx hardhat run scripts/deploy-nft-minter.js --network ganache
    ```
 This will create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
-
 If you want to test the functionnalities of the NFTMinter contract you can do it by running:
    ```sh
    npx hardhat test
    ```
 
-To start the app you have to go back to the DecentralAirbnb folder and run the command:
+To start the app you have to go back to the NFTMinter folder and run the command:
+To start the app you have to go back to the nft-draw-minter folder and run the command:
    ```sh
    yarn start
    ```
@@ -102,7 +104,6 @@ To start the app you have to go back to the DecentralAirbnb folder and run the c
 ## Future developements
 * Creating an nft marketplace where users can exchange their drawn nfts.
 * Give user the ability to create nfts using AI (text to image).
-* Add view page for each nft.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 <!-- Contact -->
