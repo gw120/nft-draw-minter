@@ -157,3 +157,114 @@
     .bids-card-bottom span {
         font-weight: normal;
     }
+
+.item {
+    display: flex;
+    padding: 0 6rem;
+    font-family: var(--font-family);
+}
+
+.item-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(165, 165, 165, 0.1);
+}
+
+    .item-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 70px;
+        padding: 50px;
+    }
+
+.item-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 5rem;
+    position: relative;
+}
+
+.item-content-title h1 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.item-content-title p {
+    font-family: var(--font-family);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.item-content-title span {
+    font-weight: 600;
+}
+
+.item-content-creator {
+    margin-top: 30px;
+}
+
+    .item-content-creator p {
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+
+    .item-content-creator div {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+        .item-content-creator div:last-child p {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+    .item-content-creator img {
+        border-radius: 50%;
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+.item-content-detail {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(165, 165, 165, 0.1);
+    padding-top: 20px;
+}
+
+    .item-content-detail p {
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+        width: 500px;
+    }
+
+.item-content-action {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+    .item-content-action p {
+        cursor: pointer;
+        font-size: 18px;
+        color: white;
+        background: var(--primary-btn);
+        margin-inline: 10px;
+        border-radius: 5px;
+        padding: 5px 5px 0px 5px;
+    }

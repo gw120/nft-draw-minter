@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./styles.css";
 import { useSelector } from "react-redux"
 import { ethers } from "ethers";
@@ -53,7 +54,11 @@ const Dashboard = () => {
                                 <div className="bids-card">
                                     <div className="bids-card-top">
                                         <img src={nft.image} alt="" />
-                                        <p className="bids-title">{nft.name}</p>
+                                        <Link to={`/nft-items/${nft.id}`}>
+                                            <p className="bids-title">
+                                                {nft.name}
+                                            </p>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
