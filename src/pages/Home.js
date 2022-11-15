@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux"
 import "./styles.css";
 import { ethers } from "ethers";
 import axios from 'axios';
 import coin from "../assets/coin.png"
 
 import contract from "../artifacts/contracts/NFTMinter.sol/NFTMinter.json";
-import { contractAddress } from "../utils/contracts-config";
-
-const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
+import networksMap from "../utils/networksMap.json";
 
 const Home = () => {
 
+    const data = useSelector((state) => state.blockchain.value)
     const [nfts, setNfts] = useState([])
 
     async function getAllNfts() {
@@ -34,8 +35,10 @@ const Home = () => {
     }
 
     useEffect(() => {
-        getAllNfts()
-    }, [])
+        if (window.ethereum !== undefined) {
+            getAllNfts()
+        }
+    }, [data.network])
 
 
     return (
@@ -52,23 +55,29 @@ const Home = () => {
                 <div className="bids-container-text">
                     <h1>Hot NFTs</h1>
                 </div>
-                <div className="bids-container-card">
-                    {nfts.map((nft, i) => {
-                        return (
-                            <div className="card-column" key={i} >
-                                <div className="bids-card">
-                                    <div className="bids-card-top">
-                                        <img src={nft.image} alt="" />
-                                        <p className="bids-title">{nft.name}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
-
+                {data.network === networksMap[networkDeployedTo] ? (
+                    <div className="bids-container-card">
+                        {nfts.map((nft, i) => {
+                            return (
+                               <div className="card-column" key={i} >
+                                  <div className="bids-card">
+                                      <div className="bids-card-top">
+                                      <img src={nft.image} alt="" />
+                                       <Link to={`/nft-items/${nft.id}`}>
+                                       <p className="bids-title">
+                                         {nft.name}
+                                     </p>
+                                 </div>
+                             )
+                        })}
+                 </div>
+             ) : (
+             <div className="bids-container-card">
+                {`Please Switch to the ${networksMap[networkDeployedTo]} network`}
                 </div>
-            </div>
+            )}
 
+           </div>
         </div>
     );
 };
