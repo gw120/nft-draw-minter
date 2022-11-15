@@ -2,14 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\hardhat",
-    "\\hardhat\\scripts",
-    "\\hardhat\\test",
-    "\\public",
-    "\\src",
-    "\\src\\components",
-    "\\src\\features",
-    "\\src\\pages",
-    "\\src\\utils"
+    "\\src"
   ],
   "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
