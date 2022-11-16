@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\hardhat",
-    "\\src"
+    "\\src",
+    "\\src\\pages",
+    "\\src\\utils"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\hardhat\\hardhat.config.js",
   "PreviewInSolutionExplorer": false
 }
