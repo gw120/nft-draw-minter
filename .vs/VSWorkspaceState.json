@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\hardhat",
-    "\\src",
-    "\\src\\pages",
-    "\\src\\utils"
+    "\\hardhat\\utils",
+    "\\src"
   ],
-  "SelectedNode": "\\hardhat\\hardhat.config.js",
+  "SelectedNode": "\\src\\utils",
   "PreviewInSolutionExplorer": false
 }
